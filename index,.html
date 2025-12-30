@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecomind – Emotional Wellness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Ecomind</h1>
+  <p>A safe space to understand your emotions</p>
+</header>
+
+<nav>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('chat')">Chat</button>
+  <button onclick="showSection('emotion')">Emotion</button>
+  <button onclick="showSection('insights')">Insights</button>
+</nav>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="section active">
+    <h2>Welcome</h2>
+    <p>
+      You’re not alone. Ecomind helps you reflect on your emotions,
+      understand patterns, and feel supported anytime.
+    </p>
+  </section>
+
+  <!-- CHAT -->
+  <section id="chat" class="section">
+    <h2>Chat with Ecomind</h2>
+
+    <div id="chatBox"></div>
+
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <input
+        id="chatInput"
+        placeholder="Type how you feel..."
+        aria-label="Chat input"
+      />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </section>
+
+  <!-- EMOTION -->
+  <section id="emotion" class="section">
+    <h2>Emotion Detection</h2>
+    <p>
+      Your camera is used to analyze facial expressions
+      and understand emotional states.
+    </p>
+
+    <video id="video" autoplay></video>
+    <p id="emotionResult">Allow camera access to begin analysis.</p>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section id="insights" class="section">
+    <h2>Emotional Insights</h2>
+    <p>
+      Your recent emotional trends will appear here based on
+      chat and emotion detection data.
+    </p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
